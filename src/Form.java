@@ -7,7 +7,7 @@ public  class Form {
     private int power;
     private int fire;
     private int cold;
-
+//daje komentarz
     public Form() {
     }
     //to jest zmiana
