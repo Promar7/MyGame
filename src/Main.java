@@ -1,3 +1,5 @@
+import random.GameLevel;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -9,22 +11,10 @@ public class Main {
 
 
         User user = UserProvider.getFromConsole();
+        GameLevel gameLevel=new GameLevel();
+        Enemy enemy= Enemy.getBoss(gameLevel.setLevel());
 
-
-
-        int change;
-
-         System.out.println("LEVEL GAME:");
-         System.out.println("1.EASY");
-         System.out.println("2.MEDIUM");
-         System.out.println("3.HARD");
-         System.out.println("4.ULTRA");
-        System.out.println("_____________________");
-        int i = new Scanner(System.in).nextInt();
-        Enemy enemy= Enemy.getBoss(i);
-
-
-        GameArena gameArena = new Game(i).setUser(user).setEnemy(enemy).intialize();
+        GameArena gameArena = new Game(gameLevel.setLevel()).setUser(user).setEnemy(enemy).intialize();
         boolean success = gameArena.fight();
 
         if(success){
