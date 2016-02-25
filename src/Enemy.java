@@ -5,7 +5,7 @@ import java.util.Scanner;
  * Created by Pro on 2016-02-22.
  */
 public class Enemy extends Form implements Fight{
-    Random random=new Random();
+
 
     public Enemy(String name,int hp,int power,int fire,int cold){
 
@@ -46,6 +46,7 @@ public class Enemy extends Form implements Fight{
 
     @Override
     public void fight(Form form) {
-        form.setHp(getHp()-(random.nextInt(form.getPower())*form.getFire())*10);
+            form.setHp(getHp()- new Random().nextInt(form.getPower())*form.getFire() *10);
+        }
     }
-}
+

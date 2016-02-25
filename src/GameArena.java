@@ -9,6 +9,7 @@ public class GameArena {
         this.user = user;
         this.enemy = enemy;
     }
+  
 
 
 
@@ -27,7 +28,7 @@ public class GameArena {
             System.out.println("_______________________________");
 
             try {
-                Thread.sleep(400);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 //nic
             }
