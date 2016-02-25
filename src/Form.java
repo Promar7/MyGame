@@ -10,7 +10,7 @@ public  class Form {
 
     public Form() {
     }
-
+    //to jest zmiana
     public Form(String name, int hp, int power, int cold, int fire){
         this.hp=hp;
         this.power=power;
